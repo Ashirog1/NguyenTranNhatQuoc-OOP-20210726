@@ -4,10 +4,10 @@ public class Ex_6_4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the month ");
+        System.out.print("Enter the month: ");
         String monthInput = scanner.nextLine();
 
-        System.out.print("Enter the year");
+        System.out.print("Enter the year: ");
         int year = scanner.nextInt();
 
         scanner.close();
