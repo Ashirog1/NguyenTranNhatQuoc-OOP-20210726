@@ -22,6 +22,7 @@ public class Ex_2_2_6 {
             double x = -b / a;
             System.out.println("solution is x = " + x);
         }
+        scanner.close();
     }
     public static void solveLinearSystem() {
         Scanner scanner = new Scanner(System.in);
@@ -47,6 +48,7 @@ public class Ex_2_2_6 {
             double y = (a1 * c2 - a2 * c1) / determinant;
             System.out.println("solution is x = " + x + ", y = " + y);
         }
+        scanner.close();
     }
     public static void solveSecondDegreeEquation() {
         Scanner scanner = new Scanner(System.in);
@@ -71,6 +73,7 @@ public class Ex_2_2_6 {
             double imaginaryPart = Math.sqrt(-discriminant) / (2 * a);
             System.out.println("solutions are x = " + realPart + " + " + imaginaryPart + "i and x = " + realPart + " - " + imaginaryPart + "i");
         }
+        scanner.close();
     }
     public static void main(String[] args) {
         /*
