@@ -18,4 +18,4 @@ public class Ex_2_2_5 {
         System.out.println("Product: " + product);
         System.out.println("Quotient: " + quotient);
     }
-}
+}:
