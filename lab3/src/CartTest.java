@@ -11,5 +11,8 @@ public class CartTest {
         anOrder.addDigitalVideoDisc(dvd1, dvd2, dvd3);
 
         anOrder.print();
+
+        anOrder.searchById(1);
+        anOrder.searchByTitle("The Lion King");
     } 
 }

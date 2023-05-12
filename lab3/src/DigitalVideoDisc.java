@@ -40,6 +40,9 @@ public class DigitalVideoDisc {
 		this.cost = cost;
 		this.id = nbDigitalVideoDiscs;
 	}
+	public DigitalVideoDisc(DigitalVideoDisc itself) {
+		this(itself.getTitle(), itself.getCategory(), itself.getDirector(), itself.getLength(), itself.getCost());
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -58,13 +61,24 @@ public class DigitalVideoDisc {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public static DigitalVideoDisc getItself(DigitalVideoDisc itself, DigitalVideoDisc dummy) {
-		return itself;
+	public DigitalVideoDisc getItself() {
+		return this;
 	}
 	public String toString() {
 		return "DVD - " + "[" + this.title + "] - [" + director + "] - [" + length + "]: [" + cost + "]$";
 	}
 	public int getId() {
 		return id;
+	}
+	public void setItself(DigitalVideoDisc itself) {
+		this.title = itself.getTitle();
+		this.category = itself.getCategory();
+		this.director = itself.getDirector();
+		this.length = itself.getLength();
+		this.cost = itself.getCost();
+		this.id = itself.getId();
+	}
+	boolean isMatch(String title) {
+		return this.getTitle().equals(title);
 	}
 }
