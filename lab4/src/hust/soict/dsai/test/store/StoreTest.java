@@ -1,9 +1,10 @@
 package hust.soict.dsai.test.store;
-import hust.soict.dsai.aims.media.DigitalVideoDisc;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store;
 
 public class StoreTest {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         DigitalVideoDisc dvd1 = new DigitalVideoDisc(20);
         DigitalVideoDisc dvd2 = new DigitalVideoDisc(35);
         Store store = new Store();
