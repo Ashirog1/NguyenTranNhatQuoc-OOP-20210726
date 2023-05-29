@@ -67,7 +67,7 @@ public class Aims {
 		Aims.showMenu();
 		int selection = Integer.valueOf(System.console().readLine());
 		switch (selection) {
-			case 0: {
+			case 0: { //exit
 				break;
 			}
 			case 1: // display all the items in the store and goto storeMenu
@@ -202,22 +202,11 @@ public class Aims {
 				break; // back
 			case 1: // add to cart
 			{
-				boolean flag = cart.addMedia(x);
-				if (flag) {
-					System.out.println(String.format("Number of medias: %d", cart.getItemsOrdered().size()));
-				}
-				break;
+				cart.addMedia(x);
 			}
 			case 2: // play
 			{
-				if (x instanceof DigitalVideoDisc) {
-					DigitalVideoDisc x_dvd = (DigitalVideoDisc) x;
-					x_dvd.play();
-				} else if (x instanceof CompactDisc) {
-					CompactDisc x_cd = (CompactDisc) x;
-					x_cd.play();
-				} else
-					System.out.println("Book cannot play! Try again!");
+				x.play();
 				selectInStoreMenu();
 				break;
 			}
@@ -239,9 +228,8 @@ public class Aims {
 				selectInMenu();
 				break;
 			}
-			case 1: { // filter , not finish
+			case 1: {
 				System.out.println("");
-				break;
 			}
 			case 2: { // sort
 				System.out.println("Enter choice: cost or title ?:");
@@ -288,7 +276,7 @@ public class Aims {
 			}
 			case 5: { // place order and empty current cart
 				System.out.println("An order is created");
-				cart.emptyCart();
+				cart = new Cart();
 				break;
 			}
 			default: {
@@ -298,10 +286,6 @@ public class Aims {
 	}
 
 	public static void main(String[] args) {
-
 		selectInMenu();
-		cart.displayCart();
-		store.available();
-
 	}
 }

@@ -38,4 +38,11 @@ public class Cart {
     public void sortCost() {
         itemsOrdered.sort(Media.COMPARE_BY_COST_TITLE);
     }
+
+    public void available() {
+        System.out.println("-----Items in cart------");
+        for (Media media: itemsOrdered){
+            System.out.println(media.toString());
+        }
+    }
 }

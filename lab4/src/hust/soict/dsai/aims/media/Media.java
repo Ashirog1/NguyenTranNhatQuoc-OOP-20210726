@@ -1,12 +1,21 @@
 package hust.soict.dsai.aims.media;
 
+import java.util.Comparator;
+
 public class Media {
     protected int id;
     protected String title;
     protected String category;
     protected float cost;
 
+    public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
+    public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
+
     public Media() {
+    }
+
+    public Media(String title) {
+        this.title = title;
     }
 
     public int getId() {
@@ -47,5 +56,9 @@ public class Media {
 
     public String toString() {
         return String.format("Title: ", this.getTitle());
+    }
+
+    public void play() {
+        
     }
 }

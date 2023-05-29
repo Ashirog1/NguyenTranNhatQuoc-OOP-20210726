@@ -6,6 +6,10 @@ import hust.soict.dsai.aims.media.Playable;
 public class DigitalVideoDisc extends Disc implements Playable {
 	private static int nbDigitalVideoDiscs = 0;
 
+	public DigitalVideoDisc() {
+		super();
+	}
+
 	public DigitalVideoDisc(String title) {
 		super();
 		nbDigitalVideoDiscs++;
