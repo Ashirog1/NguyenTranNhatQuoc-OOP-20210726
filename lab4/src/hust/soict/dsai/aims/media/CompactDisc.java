@@ -19,6 +19,11 @@ public class CompactDisc extends Disc implements Playable {
         this.setLength(length);
     }
 
+    public CompactDisc(String title) {
+        this.setTitle(title);
+    }
+
+
     public void addTrack(Track track) {
         if (!tracks.contains(track)) {
             tracks.add(track);

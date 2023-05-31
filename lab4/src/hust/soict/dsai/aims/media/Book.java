@@ -10,6 +10,10 @@ public class Book extends Media {
 
     }
 
+    public Book(String title) {
+        this.setTitle(title);
+    }
+
     public void addAuthor(String authorName) {
         if (!authors.contains(authorName)) {
             authors.add(authorName);

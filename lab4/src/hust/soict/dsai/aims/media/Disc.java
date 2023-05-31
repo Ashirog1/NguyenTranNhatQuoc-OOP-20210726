@@ -7,6 +7,10 @@ public class Disc extends Media {
     public Disc() {
         super();
     }
+    
+    public Disc(String title) {
+        this.setTitle(title);
+    }
 
     public int getLength() {
         return length;

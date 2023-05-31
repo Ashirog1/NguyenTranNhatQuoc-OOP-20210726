@@ -102,7 +102,7 @@ public class Aims {
 					} else {
 						System.out.println("Enter title of Book:");
 						String title = System.console().readLine();
-						Media x = new Book(title);
+						Book x = new Book(title);
 						store.addMedia(x);
 					}
 				}
@@ -112,7 +112,7 @@ public class Aims {
 			}
 			case 3: // information of the current cart and go to cartMenu
 			{
-				cart.displayCart();
+				cart.available();
 				selectInCartMenu();
 				break;
 			}
@@ -182,7 +182,7 @@ public class Aims {
 				break;
 			}
 			case 4: {// see current cart
-				cart.displayCart();
+				cart.available();
 				selectInStoreMenu();
 			}
 			default: {
